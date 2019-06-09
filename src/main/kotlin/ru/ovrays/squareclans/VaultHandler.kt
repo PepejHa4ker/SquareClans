@@ -12,7 +12,7 @@ object VaultHandler {
 
     fun setup(instance: JavaPlugin) {
         if (!setupEconomy()) {
-            Bukkit.getLogger().severe(String.format("Vault не установлен!"))
+            Bukkit.getLogger().severe(String.format("Vault РЅРµ СѓСЃС‚Р°РЅРѕРІР»РµРЅ!"))
             Bukkit.getPluginManager().disablePlugin(instance)
             return
         }
