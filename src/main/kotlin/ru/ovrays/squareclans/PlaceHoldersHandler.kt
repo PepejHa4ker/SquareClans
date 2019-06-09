@@ -8,7 +8,7 @@ object PlaceHoldersHandler {
 
     fun setup(instance: JavaPlugin) {
         if (!setupApi()) {
-            Bukkit.getLogger().severe(String.format("PlaceholderAPI не установлен!"))
+            Bukkit.getLogger().severe(String.format("PlaceholderAPI РЅРµ СѓСЃС‚Р°РЅРѕРІР»РµРЅ!"))
             Bukkit.getPluginManager().disablePlugin(instance)
             return
         } else {
