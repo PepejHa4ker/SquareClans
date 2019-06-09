@@ -1,2 +1,2 @@
 # SquareClans
-Clan system based on Sponge 1.12.2 
+Clan system based on Spigot 1.12.2 
