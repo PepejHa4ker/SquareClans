@@ -3,12 +3,12 @@ package ru.ovrays.squareclans.model
 import ru.ovrays.squareclans.util.ColorUtilities
 
 enum class Permission(val description: String) {
-    DELETE("Удалить клан"),
-    MODIFY("Изменять название, префикс"),
-    INVITE_EXPEL_MEMBERS("Принимать и выгонять участников"),
-    MODIFY_MEMBERS("Изменять ранги участников"),
-    CLAN_CHAT_WRITE("Писать в чат клана"),
-    CLAN_CHAT_RECEIVE("Читать чат клана");
+    DELETE("РЈРґР°Р»РёС‚СЊ РєР»Р°РЅ"),
+    MODIFY("РР·РјРµРЅСЏС‚СЊ РЅР°Р·РІР°РЅРёРµ, РїСЂРµС„РёРєСЃ"),
+    INVITE_EXPEL_MEMBERS("РџСЂРёРЅРёРјР°С‚СЊ Рё РІС‹РіРѕРЅСЏС‚СЊ СѓС‡Р°СЃС‚РЅРёРєРѕРІ"),
+    MODIFY_MEMBERS("РР·РјРµРЅСЏС‚СЊ СЂР°РЅРіРё СѓС‡Р°СЃС‚РЅРёРєРѕРІ"),
+    CLAN_CHAT_WRITE("РџРёСЃР°С‚СЊ РІ С‡Р°С‚ РєР»Р°РЅР°"),
+    CLAN_CHAT_RECEIVE("Р§РёС‚Р°С‚СЊ С‡Р°С‚ РєР»Р°РЅР°");
 
     fun getText() : String {
         return ColorUtilities.GREEN+this.name.toUpperCase() + ColorUtilities.WHITE+ " ($description)"
