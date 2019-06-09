@@ -2,7 +2,6 @@ package ru.ovrays.squareclans.model
 
 import ru.ovrays.squareclans.util.ColorUtilities
 
-
 enum class Rank(
     val priority: Int,
     val rank: String,
@@ -13,22 +12,22 @@ enum class Rank(
     OWNER(
         3,
         "owner",
-        "Лидер",
-        "Лидер клана. Имеет все права.",
+        "Р›РёРґРµСЂ",
+        "Р›РёРґРµСЂ РєР»Р°РЅР°. РёРјРµРµС‚ РІСЃРµ РїСЂР°РІР°.",
         Permission.values().toSet()
     ),
     OFFICER(
         2,
         "officer",
-        "Офицер",
-        "Офицер клана. Имеет все права владельца, кроме удаления клана и изменения названия/префикса.",
+        "РћС„РёС†РµСЂ",
+        "РћС„РёС†РµСЂ РєР»Р°РЅР°. РёРјРµРµС‚ РІСЃРµ РїСЂР°РІР° РІР»Р°РґРµР»СЊС†Р°, РєСЂРѕРјРµ СѓРґР°Р»РµРЅРёСЏ РєР»Р°РЅР° Рё РёР·РјРµРЅРµРЅРёВ¤ РЅР°Р·РІР°РЅРёСЏ/РїСЂРµС„РёРєСЃР°.",
         OWNER.perms.minus(arrayOf(Permission.MODIFY, Permission.DELETE))
     ),
     MEMBER(
         1,
         "member",
-        "Участник",
-        "Участник клана. Имеет стандартные права.",
+        "РЈС‡Р°СЃС‚РЅРёРє",
+        "РЈС‡Р°СЃС‚РЅРёРє РєР»Р°РЅР°. РёРјРµРµС‚ СЃС‚Р°РЅРґР°СЂС‚РЅС‹Рµ РїСЂР°РІР°.",
         OFFICER.perms.minus(arrayOf(Permission.INVITE_EXPEL_MEMBERS, Permission.MODIFY_MEMBERS))
     );
 
@@ -39,9 +38,9 @@ enum class Rank(
 
     fun getInfo(): String {
         val builder = StringBuilder()
-        builder.append(ColorUtilities.RED + "Описание:\n")
+        builder.append(ColorUtilities.RED + "РѕРїРёСЃР°РЅРёРµ:\n")
         this.description.split("\n").forEach { builder.append(ColorUtilities.YELLOW + it).append("\n") }
-        builder.append(ColorUtilities.RED + "Права:\n")
+        builder.append(ColorUtilities.RED + "РїСЂР°РІР°:\n")
         perms.sortedByDescending { priority }.forEach {
             builder.append(ColorUtilities.AQUA + " - " + ColorUtilities.RESET + it.getText() + "\n")
         }
